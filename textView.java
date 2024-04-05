@@ -100,7 +100,7 @@ public class textView extends JFrame {
 
     private synchronized void taoCayThuMuc (){
         Thread thread = new Thread(()->{
-            String directoryPath = "D://HOCTAP";
+            String directoryPath = "/data.txt";
             File directory = new File(directoryPath);
 
             if (!directory.exists() || !directory.isDirectory()){
@@ -138,14 +138,5 @@ public class textView extends JFrame {
         thread.start();
     }
 
-    public static void main(String[] args) {
-        try{
-            UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
-            SwingUtilities.invokeLater(()->{
-                new textView();
-            });
-        }catch (Exception e){
-            e.printStackTrace();
-        }
-    }
+   
 }

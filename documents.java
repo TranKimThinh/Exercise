@@ -24,7 +24,8 @@ public class documents {
 
     public void saveToFile(String data){
         try {
-            FileWriter fileWriter = new FileWriter("D://HOCTAP//KY 2//JAVA//Excercises//TextEditor1//src//model//data.txt");
+        	File f = new File("/data.txt");
+            FileWriter fileWriter = new FileWriter(f);
             BufferedWriter bufferedWriter = new BufferedWriter(fileWriter);
 
             bufferedWriter.write(data);
@@ -38,7 +39,7 @@ public class documents {
     public String readFile(){
         String data = "";
         try {
-            FileReader fileReader = new FileReader("D://HOCTAP//KY 2//JAVA//Excercises//TextEditor1//src//model//data.txt");
+            FileReader fileReader = new FileReader("src/MVC/data.txt");
             BufferedReader bufferedReader = new BufferedReader(fileReader);
 
             String line = "";
